@@ -33,6 +33,10 @@ extensions = [
     "sphinx_rtd_theme"
 ]
 
+html_js_files = [
+    'js/custom.js'
+]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
