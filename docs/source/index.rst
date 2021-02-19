@@ -14,9 +14,9 @@ Penjelasan tentang GTFW.
    :maxdepth: 2
 
    view/instalasi
-
-   
-
+   view/flow
+   view/class
+   view/helper
 
 
 Indices and tables

@@ -33,9 +33,20 @@ extensions = [
     "sphinx_rtd_theme"
 ]
 
+html_logo = "images/eCampuz-Icon2.png"
+
+html_css_files = [
+    'css/custom.css'
+]
+
 html_js_files = [
     'js/custom.js'
 ]
+
+html_theme_options = {
+    'logo_only': True,
+    'style_nav_header_background': '#ea6267' 
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -59,10 +70,10 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 
+# List Theme:
 # import sphinx_boogergreen_theme
-# import sphinx_enos_theme
-# import sphinx-material
 import sphinx_rtd_theme
+# Furo
 
 html_theme = 'sphinx_rtd_theme'
 

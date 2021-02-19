@@ -7,11 +7,11 @@ htdoc webserver apache dan melakukan restore file .sql file database ke server m
 untuk kemudian dilakukan konfigurasi agar aplikasi tersebut bisa digunakan.
 Ada 3 hal komponen pokok dalam melakukan instalasi aplikasi berbasis gtfw, yaitu:
 
-1. GTFW-Base
-2. GTFW-App
-3. Database GTFW
+#. GTFW-Base
+#. GTFW-App
+#. Database GTFW
 
-.. _base:
+.. _instalasi-base:
 
 *********
 GTFW-Base
@@ -22,7 +22,7 @@ GTFW-Base
 * Gtfw-base bisa digunakan untuk beberapa aplikasi.
 * Gtfw-base bisa di-clone `disini <https://git.solusikampus.id/framework/gtfw-3.3/gtfw-3.3-base>`__.
 
-.. _app:
+.. _instalasi-app:
 
 ********
 GTFW-App
@@ -43,35 +43,37 @@ hanya table-table dasar dan belum ada table untuk aplikasi tertentu.
 Contoh
 ******
 
-1. Clone repositori :ref:`GTFW-Base <base>` dan :ref:`GTFW-App <app>`.
+1. Clone repositori :ref:`GTFW-Base <instalasi-base>` dan :ref:`GTFW-App <instalasi-app>`.
 2. Letak clone repositori GTFW-Base bebas dimana saja, sedangkan GTFW-App di dalam folder htdocs.
 
 .. image:: /images/direktori-gtfw.jpg
    :alt: Direktori penempatan GTFW App
    :align: center
 
-3. Struktur dasar folder GTFW-App:
-
-.. image:: /images/struktur-dasar.jpg
+.. figure:: /images/struktur-dasar.jpg
    :alt: Struktur dasar direktori GTFW App
    :align: center
 
-4. Import file database GTFW ke server mysql. Cth: |db-gtfwapp|.
-5. Buka folder config/.
-6. Copy file **gtfw_base_dir.def.sample** dan pastekan di folder tersebut, kemudian ubah nama file hasil copy paste menjadi **gtfw_base_dir.def**.
-7. Buka file gtfw_base_dir.def dengan text editor.
-8. Inputkan path folder GTFW-Base yang telah diinstal.
+   Struktur dasar folder GTFW-App
+
+3. Import file database GTFW ke server mysql. Cth: |img-db-gtfwapp|.
+4. Buka folder config/.
+5. Copy file **gtfw_base_dir.def.sample** dan pastekan di folder tersebut, kemudian ubah nama file hasil copy paste menjadi **gtfw_base_dir.def**.
+6. Buka file gtfw_base_dir.def dengan text editor.
+7. Inputkan path folder GTFW-Base yang telah diinstal.
 
 .. image:: /images/path-gtfw-base.jpg
    :alt: Path folder GTFW Base
    :align: center
 
-9. Masih didalam folder config/.
-10. Copy file **database.conf.php.sample** dan pastekan di folder tersebut, kemudian ubah nama file hasil copy paste menjadi **database.conf.php**.
-11. Buka file **database.conf.php** dengan text editor.
-12. Isikan data **db_host**, **db_user**, **db_pass** sesuai konfigurasi server mysql dan **db_name** sesuai nama database GTFW yang sudah di-import.
+8. Masih didalam folder config/.
+9. Copy file **database.conf.php.sample** dan pastekan di folder tersebut, kemudian ubah nama file hasil copy paste menjadi **database.conf.php**.
+10. Buka file **database.conf.php** dengan text editor.
+11. Isikan data **db_host**, **db_user**, **db_pass** sesuai konfigurasi server mysql dan **db_name** sesuai nama database GTFW yang sudah di-import.
 
 .. code-block:: php
+   :linenos: 
+   :caption: Source code @config/database.conf.php
 
    <?php
    $database['db_conn'][0]['db_driv'] = 'default';
@@ -86,6 +88,5 @@ Contoh
    $database['db_conn'][0]['db_port'] = '3306';
    ?>
 
-
-.. |db-gtfwapp| image:: /images/gtfw-db.jpg
+.. |img-db-gtfwapp| image:: /images/gtfw-db.jpg
                 :alt: Contoh database gtfw
